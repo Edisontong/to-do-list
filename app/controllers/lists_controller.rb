@@ -29,8 +29,8 @@ class ListsController < ApplicationController
   end
 
   def destroy
-    @list = List.find_by(id: params["id"])
-    @list.destroy
+    @lists = List.find_by(id: params["id"])
+    @lists.destroy
     render json: { message: "you done did destroy that there task!!" }
   end
 end
